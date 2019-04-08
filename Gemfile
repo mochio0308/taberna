@@ -50,3 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'gon'
 
 gem 'dotenv-rails'
+
+gem 'webpacker'
