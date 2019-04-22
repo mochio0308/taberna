@@ -52,3 +52,7 @@ gem 'gon'
 gem 'dotenv-rails'
 
 gem 'webpacker'
+
+gem 'bootstrap', '~> 4.2.1'
+
+gem 'jquery-rails'
