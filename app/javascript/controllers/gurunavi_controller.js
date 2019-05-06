@@ -19,7 +19,17 @@ export default class extends Controller {
     axios.get(url).then(response => {
         this.resultsTarget.innerHTML = ""
         for (let i = 0; i < response.data.rest.length; i++) {
-            this.resultsTarget.innerHTML += `<p><a href="${response.data.rest[i].url}">${response.data.rest[i].name}</a></p>${response.data.rest[i].category}`
+            this.resultsTarget.innerHTML += `
+                                            <div class="card">
+                                              <div class="card-body">
+                                                <h5 class="card-title">${response.data.rest[i].name}</h5>
+                                                <p class="card-text">住所:${response.data.rest[i].address}</p>
+                                                <p class="card-text">営業時間:${response.data.rest[i].opentime}</p>
+                                                <p class="card-text">定休日:${response.data.rest[i].holiday}</p>
+                                                <a href="${response.data.rest[i].url}" class="btn btn-primary">詳細</a>
+                                              </div>
+                                            </div>
+                                            `
           console.log(response.data.rest[i]);
         }
     }, false)

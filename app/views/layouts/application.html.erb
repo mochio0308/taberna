@@ -12,7 +12,10 @@
 
   <body>
     <%= render 'layouts/header'%>
+    <%= render 'layouts/jumbotron'%>
     <div class="container">
-    <%= yield %>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer'%>
   </body>
 </html>
